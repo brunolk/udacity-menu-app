@@ -1,0 +1,60 @@
+<html>
+
+    <head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+        <div class = 'pane'>
+        <h1>{{restaurant.name}}</h1>
+        
+        <a href='{{url_for('showLogin')}}'>Login</a></br></br>
+        <a href='{{url_for('showRestaurants')}}'>Back</a></br></br>
+
+        <h2>Appetizers</h2>
+        {% for item in items %}
+            {% if item.course == 'Appetizer' %}
+            <div>
+                <p>{{item.name}}</p>
+                <p>{{item.description}}</p>
+                <p>{{item.price}}</p>
+            </div>
+            {% endif %}
+        {% endfor %}
+
+        <h2>Entrees</h2>
+        {% for item in items %}
+            {% if item.course == 'Entree' %}
+            <div>
+                <p>{{item.name}}</p>
+                <p>{{item.description}}</p>
+                <p>{{item.price}}</p>
+            </div>
+            {% endif %}
+        {% endfor %}
+
+        <h2>Desserts</h2>
+        {% for item in items %}
+            {% if item.course == 'Dessert' %}
+            <div>
+                <p>{{item.name}}</p>
+                <p>{{item.description}}</p>
+                <p>{{item.price}}</p>
+            </div>
+            {% endif %}
+        {% endfor %}
+
+        <h2>Beverages</h2>
+        {% for item in items %}
+            {% if item.course == 'Beverage' %}
+            <div>
+                <p>{{item.name}}</p>
+                <p>{{item.description}}</p>
+                <p>{{item.price}}</p>
+            </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    </body>
+
+</html>
