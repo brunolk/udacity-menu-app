@@ -16,7 +16,7 @@ In this repository you will find:
 
 * **templates**: folder containing the application HTML files
 
-* **static**: folder containing the applciation CSS files 
+* **static**: folder containing the application CSS files
 
 ## Prerequisites
 
